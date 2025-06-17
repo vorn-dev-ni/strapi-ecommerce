@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 3
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "province": {
+      "type": "string",
+      "required": true
+    },
+    "orderAmount": {
+      "type": "decimal",
+      "required": true
+    },
+    "userId": {
+      "type": "integer",
+      "required": true
+    },
+    "orderItemList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "order-items.order-items"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 3
+    },
+    "zipcode": {
+      "type": "string",
+      "required": true
+    },
+    "paymentId": {
+      "type": "string",
+      "required": true
+    },
+    "method": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "processing"
+    },
+    "orderNum": {
+      "type": "string"
+    }
+  }
+}

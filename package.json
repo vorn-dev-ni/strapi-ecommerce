@@ -1,0 +1,38 @@
+{
+  "name": "my-project",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.25.21",
+    "@strapi/plugin-color-picker": "^4.25.22",
+    "@strapi/plugin-i18n": "4.25.21",
+    "@strapi/plugin-users-permissions": "4.25.21",
+    "@strapi/provider-upload-aws-s3": "^5.15.1",
+    "@strapi/strapi": "4.25.21",
+    "filter-button": "^0.2.2",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "ab9b887c-8b10-44e9-8000-1ad1e11a97b6"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,14 +1,18 @@
-FROM node:18-alpine
+FROM node:18-slim
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
-RUN yarn install --development
+COPY package.json package-lock.json ./
+RUN npm install
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
 ENV NODE_ENV=development
 
-CMD ["yarn", "start"]
+# Expose the port your app listens on
+EXPOSE 1337
+
+# Start the app
+CMD ["npm", "start"]

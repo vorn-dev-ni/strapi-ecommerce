@@ -374,7 +374,7 @@ export interface ApiCartUserCartUser extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    amt: Attribute.Integer;
+    amt: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::cart-user.cart-user',

@@ -27,18 +27,18 @@ export default factories.createCoreController(
         const variant = await strapi.entityService.findOne(
           "api::product-variant.product-variant",
           variantId,
-          { fields: ["qty"] }
+          { fields: ["qty"] },
         );
 
         if (!variant) {
           return ctx.badRequest(
-            `Product variant with ID ${variantId} not found`
+            `Product variant with ID ${variantId} not found`,
           );
         }
 
         if (variant.qty < orderedQty) {
           return ctx.badRequest(
-            `Insufficient stock for variant ID ${variantId}`
+            `Insufficient stock for variant ID ${variantId}`,
           );
         }
 
@@ -48,9 +48,10 @@ export default factories.createCoreController(
           variantId,
           {
             data: {
-              qty: variant.qty - orderedQty,
-            },
-          }
+              // Add 'as any' to bypass the type check for this specific field
+              qty: (variant.qty as number) - orderedQty,
+            } as any,
+          },
         );
       }
 
@@ -59,5 +60,5 @@ export default factories.createCoreController(
 
       return response;
     },
-  })
+  }),
 );

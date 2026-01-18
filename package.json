@@ -24,11 +24,12 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
+    "sharp": "^0.34.5",
     "sqlite3": "^5.1.7",
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Siv sovanpanhavorn"
   },
   "strapi": {
     "uuid": "ab9b887c-8b10-44e9-8000-1ad1e11a97b6"
@@ -37,5 +38,8 @@
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@strapi/typescript-utils": "^5.33.3"
+  }
 }

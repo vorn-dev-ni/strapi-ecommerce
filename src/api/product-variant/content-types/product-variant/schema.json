@@ -49,7 +49,22 @@
         "Black",
         "Blue",
         "Red",
-        "Green"
+        "Green",
+        "Orange",
+        "Yellow",
+        "Purple",
+        "Pink",
+        "Brown",
+        "Gray",
+        "Cyan",
+        "Magenta",
+        "Teal",
+        "Navy",
+        "Maroon",
+        "Lime",
+        "Olive",
+        "Coral",
+        "Gold"
       ],
       "required": true
     },

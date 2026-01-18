@@ -374,7 +374,7 @@ export interface ApiCartUserCartUser extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    amt: Attribute.Integer;
+    amt: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::cart-user.cart-user',
@@ -511,7 +511,30 @@ export interface ApiProductVariantProductVariant extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    color: Attribute.Enumeration<['White', 'Black', 'Blue', 'Red', 'Green']> &
+    color: Attribute.Enumeration<
+      [
+        'White',
+        'Black',
+        'Blue',
+        'Red',
+        'Green',
+        'Orange',
+        'Yellow',
+        'Purple',
+        'Pink',
+        'Brown',
+        'Gray',
+        'Cyan',
+        'Magenta',
+        'Teal',
+        'Navy',
+        'Maroon',
+        'Lime',
+        'Olive',
+        'Coral',
+        'Gold'
+      ]
+    > &
       Attribute.Required;
     ColorCode: Attribute.String &
       Attribute.CustomField<'plugin::color-picker.color'>;
